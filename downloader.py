@@ -40,8 +40,7 @@ class SplitBufferThreads(threading.Thread):
         self.req = None
 
     def get_file_data(self):
-        y = requests.get(self.__url, stream=True, headers={'Range': f'bytes={self.__byteRange}'}).raw.read()
-        return y
+        return requests.get(self.__url, stream=True, headers={'Range': f'bytes={self.__byteRange}'}).raw.read()
 
 
 def download(size_in_bytes: int, link=None, threads: int = config['thread_count'],
