@@ -20,13 +20,9 @@ def build_range(value, limit: int = 1024):
         y = x - limit
 
         if y > 0:
-            a = f'{y}-{x}'
-            print('> o', a)
-            lst.append(a)
+            lst.append(f'{y}-{x}')
         elif y < 0:
-            a = f'{0}-{x}'
-            print('< o', a)
-            lst.append(a)
+            lst.append(f'{0}-{x}')
     lst.reverse()
     return lst
 
