@@ -58,7 +58,7 @@ def download(size_in_bytes: int, link=None, threads: int = config['thread_count'
 
     data_list = []
     bytes_range = build_range(int(size_in_bytes), bytes_limit)
-    print(len(bytes_range), threads, 'len(bytes_range) > threads')
+
     if len(bytes_range) < threads:
         for idx in range(len(bytes_range)):
             byte_range = bytes_range[idx]
