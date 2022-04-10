@@ -22,7 +22,7 @@ async def listen():
 
             for url in data:
                 if not url['processed']:
-                    download(link=url['url'], size_in_bytes=url['size'], threads=5, bytes_limit=30000)
+                    download(link=url['url'], size_in_bytes=url['size'])
 
             print('Stop downloading!')
 
